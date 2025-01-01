@@ -1,0 +1,19 @@
+*.pyc
+*.pyo
+__pycache__/
+
+venv/
+env/
+.venv/
+.virtualenv/
+
+db.sqlite3
+*.log
+
+# Settings and sensitive data
+# settings.py
+
+# Static and media files
+staticfiles/
+media/
+
