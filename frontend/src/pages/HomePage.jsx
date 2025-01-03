@@ -1,11 +1,11 @@
 import { Filter } from '../components/Filter'
 import { NoteCardContainer } from '../components/NoteCardContainer'
 
-export const HomePage = () => {
+export const HomePage = ({ notes, loading }) => {
   return (
     <>
       <Filter />
-      <NoteCardContainer />
+      <NoteCardContainer notes={notes} loading={loading} />
     </>
   )
 }

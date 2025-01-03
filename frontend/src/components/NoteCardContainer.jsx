@@ -1,20 +1,14 @@
+import Loader from './Loader'
 import NoteCard from './NoteCard'
 
-export const NoteCardContainer = () => {
+export const NoteCardContainer = ({ notes, loading }) => {
   return (
     <div className='container'>
       <div className='note-has-grid row'>
-        <NoteCard color='green' />
-        <NoteCard color='purple' />
-        <NoteCard color='blue' />
-
-        <NoteCard color='green' />
-        <NoteCard color='purple' />
-        <NoteCard color='blue' />
-
-        <NoteCard color='green' />
-        <NoteCard color='purple' />
-        <NoteCard color='blue' />
+        {loading && <Loader loading={loading} />}
+        {notes.map((note) => (
+          <NoteCard key={note.id} note={note} />
+        ))}
       </div>
     </div>
   )
